@@ -4,8 +4,9 @@ import (
 	"fmt"
 	"os"
 
-	"./list"
-	homedir "github.com/mitchellh/go-homedir"
+	"proctor-command/cmd/list"
+
+	"github.com/mitchellh/go-homedir"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -27,8 +28,8 @@ func Execute() {
 
 func init() {
 	cobra.OnInitialize(initConfig)
-	listCmd := list.NewCmd()
-	rootCmd.AddCommand(listCmd)
+
+	rootCmd.AddCommand(list.GetCmd())
 
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.proctor-command.yaml)")
 
