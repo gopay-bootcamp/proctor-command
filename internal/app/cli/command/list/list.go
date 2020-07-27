@@ -11,10 +11,12 @@ var listCmd = &cobra.Command{
 	Short: "List of all procs",
 	Long:  `List of all procs available for execution`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("list called")
+		procsList := "list called"
+		fmt.Println(procsList)
 	},
 }
 
+// execute the listCmd
 func GetCmd() *cobra.Command {
 	return listCmd
 }
