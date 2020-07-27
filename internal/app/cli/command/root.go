@@ -1,10 +1,10 @@
-package cmd
+package command
 
 import (
 	"fmt"
 	"os"
 
-	"proctor-command/cmd/list"
+	"proctor-command/internal/app/cli/command/list"
 
 	"github.com/mitchellh/go-homedir"
 	"github.com/spf13/cobra"

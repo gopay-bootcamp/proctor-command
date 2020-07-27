@@ -20,5 +20,5 @@ func GetCmd() *cobra.Command {
 }
 
 func init() {
-	listCmd.Flags().BoolP("listtoggle", "t", false, "Help message for toggle")
+	listCmd.Flags().BoolP("list-search", "s", false, "Search a particular command in the list")
 }
